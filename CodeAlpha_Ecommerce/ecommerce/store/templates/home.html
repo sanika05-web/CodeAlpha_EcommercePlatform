@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple E-commerce</title>
+    <link rel="stylesheet" href="{% static 'store/style.css' %}">
+</head>
+<body>
+
+<header>
+    <h1>Simple E-commerce Store</h1>
+</header>
+
+{% if messages %}
+    {% for message in messages %}
+        <p class="message">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+<nav>
+    {% if user.is_authenticated %}
+        <span>Welcome, {{ user.username }}</span>
+        <a href="/my-orders/">My Orders</a>
+
+        <form action="/accounts/logout/" method="post" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    {% else %}
+        <a href="/signup/">Create Account</a>
+        <a href="/accounts/login/">Login</a>
+    {% endif %}
+</nav>
+
+
+<div class="container">
+    {% for product in products %}
+        <div class="product-card">
+            <img src="{{ product.image }}">
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.description }}</p>
+            <p class="price">₹{{ product.price }}</p>
+
+            <a href="/buy/{{ product.id }}/">
+                <button>Buy Now</button>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0b0f1a;
+    color: #eaeaea;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #111827;
+}
+
+nav a, nav span {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+/* BUTTONS */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #3b82f6;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+    background-color: #111827;
+    border-radius: 10px;
+    width: 260px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.product-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* PRICE */
+.price {
+    color: #22c55e;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* MESSAGE */
+.message {
+    text-align: center;
+    margin: 15px;
+    color: #22c55e;
+    font-weight: bold;
+}
+
+/* FORM CONTAINER */
+.form-box {
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: #111827;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+    background-color: #1f2933;
+    color: white;
+}
+
+.form-box input:focus {
+    outline: 2px solid #2563eb;
+}
+
+.form-box button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ORDER CARD */
+.order-card {
+    background-color: #111827;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}

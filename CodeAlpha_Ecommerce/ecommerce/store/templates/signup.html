@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'store/style.css' %}">
+</head>
+<body>
+
+<div class="form-box">
+    <h2>Create Account</h2>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p class="message" style="color:#ef4444;">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.non_field_errors }}
+
+        <p>
+            {{ form.username.label_tag }} <br>
+            {{ form.username }}
+            {{ form.username.errors }}
+        </p>
+
+        <p>
+            {{ form.password1.label_tag }} <br>
+            {{ form.password1 }}
+            {{ form.password1.errors }}
+        </p>
+
+        <p>
+            {{ form.password2.label_tag }} <br>
+            {{ form.password2 }}
+            {{ form.password2.errors }}
+        </p>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <p style="margin-top:15px; text-align:center;">
+        Already have an account?
+        <a href="/accounts/login/" style="color:#60a5fa;">Login</a>
+    </p>
+</div>
+
+</body>
+</html>
