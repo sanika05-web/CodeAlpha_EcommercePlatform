@@ -22,4 +22,4 @@ A simple e-commerce web application built using Django.
 4. Open browser and go to `http://127.0.0.1:8000/`
 
 # Author
-Riddhi Patil
+Sanika Khegade
